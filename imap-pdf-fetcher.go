@@ -68,7 +68,6 @@ func fetchAttachments() {
 	if err := c.Login(os.Getenv("SMTP_USER"), os.Getenv("SMTP_PASSWORD")); err != nil {
 		log.Fatal(err)
 	}
-	log.Println("Connection established")
 
 	mbox, err := c.Select("INBOX", false)
 	checkIfErrNil(err)
